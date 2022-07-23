@@ -1,0 +1,93 @@
+Equality
+```{r}
+"Rchitect" != "rchitect"
+TRUE == FALSE
+-6*14 != 17-101
+TRUE == 1
+
+-6 * 5 + 2 >= -10+1
+```
+Compare vectors
+
+```{r}
+linkedin <- c(16,9,13,5,2,17,14)
+facebook <- c(17,9,16,5,2,13,14)
+
+linkedin>15
+
+facebook <= 5
+
+linkedin> facebook
+
+```
+
+compare matrices
+
+```{r}
+views <- matrix(c(linkedin, facebook), nrow=2, byrow = TRUE)
+views
+views ==13
+views <= 14
+```
+
+& and |
+
+```{r}
+linkedin
+last<- tail (linkedin, 3)
+last > 5 | last < 10
+last>15 & last <= 20
+
+linkedin>10 & facebook <10
+
+```
+
+The if statement
+
+```{r}
+medium <- "Linkedin"
+num_views <- 14
+
+if(medium == "Linkedin"){
+  print("Showing Linkedin information")
+}
+
+ 
+```
+
+```{r}
+result <- ""
+number <- 6
+
+if(number < 10){
+  if(number < 5){
+    result <- "extra small"
+  }
+  else {
+    result <- "small"
+  }
+}else if(number<100){
+  result <- "medium"
+}else{
+  result <- "large"
+}
+
+print(result)
+```
+
+Write a while lopp
+
+```{r}
+speed <- 64
+
+while(speed > 30){
+  print("slow down! ")
+  print(speed)
+  speed <- speed -7
+}
+
+```
+```{r}
+ 
+```
+
