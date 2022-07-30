@@ -3,4 +3,32 @@ title: "Tarea 2 - 2994932450101"
 output: html_notebookF
 ---
 
+# Funciones en R
+Recordemos que una funcion es un bloque de codigo que puede ser parametrizado y ejecutado para resolver una tarea n cantidad de veces que sea necesario
 
+## Una funcion se compone de
+* Un nombre
+* Argumentos
+* Cuerpo
+
+## Las fucniones que son definidas por algun usuario deben seguir la siguiente estrutura:
+
+```{r}
+nombrefuncion <- function(argumentos){
+  las operaciones
+}
+
+Los argumentos son variables que necesita la funcion o que utilizara la funcion para poer realizar las tareas o las operaciones dentro de ella, los arguemtnos se pueden definir 
+
+Ejemplo de una funcion que suma dos valores
+```
+```{r}
+sumarValores <-function(valor1, valor2){
+  valor1+valor2
+}
+
+sumarValores(2,6)
+```
+
+
+Familia apply
