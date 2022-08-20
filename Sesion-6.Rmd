@@ -1,0 +1,61 @@
+---
+title: "Sesion 6"
+output: html_notebook
+---
+
+Grouping and summarizing 
+Sumirizing the median life expectancy
+
+```{r}
+gapminder %>%
+  filter(year==1957) %>% 
+  summarize(medianLifeExp = median(lifeExp))
+```
+
+Summarizing by year
+```{r}
+gapminder %>%
+  group_by(year) %>% 
+  summarize(medianLifeExp = median(lifeExp), maxGdpPercap = max(gdpPercap))
+```
+
+Summarizing by continent
+```{r}
+
+gapminder%>%
+  filter(year ==1957) %>%
+  group_by(continent) %>%
+  summarize(medianLifeExp = median(lifeExp), maxGdpPercap = max(gdpPercap)) %>%
+  arrange(desc(maxGdpPercap))
+```
+
+
+Sumarizing by continent and year
+```{r}
+
+```
+
+
+
+visualizing media life expectancy over time
+```{r}
+by_year <- gapminder %>%
+  group_by(year) %>%
+  summarize(medianGdpPercap = median(lifeExp))
+
+by_year
+
+ 
+
+```
+
+Visualizr GDP per capita by country in Oceania
+```{r}
+
+oceania_1952 <- gapminder %>%
+  filter(continent == "Oceania", year ==1952)
+
+ggplot(oceania_1952, aes(x=country, y gdpPercap))+
+  geom_col()
+```
+

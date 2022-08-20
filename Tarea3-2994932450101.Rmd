@@ -1,0 +1,6 @@
+# Lectura archivo CSV
+
+```{r}
+mi_archivo <- read.csv("primary_results.csv", header = TRUE, sep = ",", dec = ".", fill = TRUE, encoding = "UTF-8")
+```
+
